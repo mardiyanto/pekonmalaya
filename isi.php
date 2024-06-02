@@ -279,35 +279,43 @@ echo"<!-- Header Start -->
 </div>
 <!-- Header End -->
 <!-- Projects Start -->
-    <div class='container-xxl py-5'>
-        <div class='container'>
-            <div class='text-center mx-auto wow fadeInUp' data-wow-delay='0.1s' style='max-width: 500px;'>
-                <p class='fs-5 fw-bold text-primary'>Galeri</p>
-                <h1 class='display-5 mb-5'>Galeri Kami</h1>
-            </div>
-           
-            <div class='row g-4 portfolio-container'> ";
-            $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC ");              
-        while ($t=mysqli_fetch_array($tebaru)){
-                
-                echo"
-            <div class='col-lg-4 col-md-6 portfolio-item first wow fadeInUp' data-wow-delay='0.1s'>
-                    <div class='portfolio-inner rounded'>
-                        <img class='img-fluid' src='foto/galleri/$t[gambar]' alt=''>
-                        <div class='portfolio-text'>
-                            <h4 class='text-white mb-4'>$t[judul]</h4>
-                            <div class='d-flex'>
-                                <a class='btn btn-lg-square rounded-circle mx-2' href='foto/galleri/$t[gambar]' data-lightbox='portfolio'><i class='fa fa-eye'></i></a>
-                                <a class='btn btn-lg-square rounded-circle mx-2' href=''><i class='fa fa-link'></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>";
-            }
-              echo"
-            </div>
-        </div>
+<div class='container-fluid blog pb-5'>
+<div class='container pb-5'>
+    <div class='text-center mx-auto pb-5 wow fadeInUp' data-wow-delay='0.1s' style='max-width: 800px;'>
+        <h4 class='text-primary'>Galeri Kami</h4>
+        <h1 class='display-4'>Layanani Kami Terbaiki, Bukan Paling Baik</h1>
     </div>
+    <div class='row g-4 justify-content-center'>";
+   $tebaru=mysqli_query($koneksi,' SELECT * FROM galeri ORDER BY id_galeri DESC ');
+            while ($t=mysqli_fetch_array($tebaru)){  
+        echo"<div class='col-md-6 col-lg-6 col-xl-4 wow fadeInUp' data-wow-delay='0.1s'>
+            <div class='blog-item bg-light rounded p-4' style='background-image: url(tema/img/bg.png);'>
+                <div class='mb-4'>
+                    <h4 class='text-primary mb-2'>Galeri</h4>
+                    <div class='d-flex justify-content-between'>
+                        <p class='mb-0'><span class='text-dark fw-bold'>On</span> $t[tgl]</p>
+                        <p class='mb-0'><span class='text-dark fw-bold'>By</span> admin</p>
+                    </div>
+                </div>
+                <div class='project-img'>
+                    <img src='foto/galleri/$t[gambar]' class='img-fluid w-100 rounded' alt='Image'>
+                    <div class='blog-plus-icon'>
+                        <a href='foto/galleri/$t[gambar]' data-lightbox='blog-1' class='btn btn-primary btn-md-square rounded-pill'><i class='fas fa-plus fa-1x'></i></a>
+                    </div>
+                </div>
+                <div class='my-4'>
+                    <a href='utama.php?aksi=galeri' class='h4'>$t[judul]</a>
+                </div>
+                
+            </div>
+        </div>";
+        }
+      
+        
+   echo" </div>
+    
+</div>
+</div>
     <!-- Projects End -->
 ";
 

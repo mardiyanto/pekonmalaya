@@ -54,6 +54,29 @@ elseif($_GET['aksi']=='inputhalaman'){
 		  }
 		 }
 }
+elseif($_GET['aksi']=='inputlayanan'){
+	if (empty($_POST[jd]) || empty($_POST[isi])){
+		echo "<script>window.alert('Data yang Anda isikan belum lengkap');
+			   window.location=('javascript:history.go(-1)')</script>";
+			}
+	 else{
+		   
+	   $lokasi_file=$_FILES[gambar][tmp_name];
+	   if(empty($lokasi_file)){
+	   mysqli_query($koneksi,"insert into berita (judul,tanggal,isi,jenis) values ('$_POST[jd]','$date','$_POST[isi]','layanan')");
+		  
+	   echo "<script>window.location=('index.php?aksi=layanan')</script>";
+	   }else{
+	   $tanggal=date("dmYhis");
+	   $file=$_FILES['gambar']['tmp_name'];
+	   $file_name=$_FILES['gambar']['name'];
+	   copy($file,"../foto/data/".$tanggal.".jpg");
+	   mysqli_query($koneksi,"insert into berita (judul,tanggal,isi,gambar,jenis) values ('$_POST[jd]','$date','$_POST[isi]','$tanggal.jpg','layanan')");
+		  
+	   echo "<script>window.location=('index.php?aksi=layanan')</script>";
+		  }
+		 }
+}
 elseif($_GET['aksi']=='inputgaleri'){
 	if (empty($_POST[jd]) || empty($_POST[isi])){
 		echo "<script>window.alert('Data yang Anda isikan belum lengkap');

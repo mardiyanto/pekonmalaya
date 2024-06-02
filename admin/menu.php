@@ -16,8 +16,9 @@
                </a>
                <ul class='treeview-menu'>
                 <li><a href='index.php?aksi=informasi'><i class='fa fa-arrows-h'></i>INFORMASI</a></li>
-                <li><a href='index.php?aksi=galeri'><i class='fa fa-arrows-h'></i>GALERY</a></li>
+                <li><a href='index.php?aksi=layanan'><i class='fa fa-arrows-h'></i>LAYANAN</a></li>
                 <li><a href='index.php?aksi=halaman'><i class='fa fa-arrows-h'></i>HALAMAN</a></li>
+                <li><a href='index.php?aksi=galeri'><i class='fa fa-arrows-h'></i>GALERY</a></li>
                 <li><a href='index.php?aksi=profil'><i class='fa fa-arrows-h'></i>PROFIL</a></li>
                 <li><a href='index.php?aksi=kritik'><i class='fa fa-arrows-h'></i>KRITIK</a></li>
    

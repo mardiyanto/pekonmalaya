@@ -15,15 +15,17 @@ include "koneksi.php";
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
         <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link href="tema/lib/animate/animate.min.css" rel="stylesheet">
         <link href="tema/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="tema/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
 
         <!-- Customized Bootstrap Stylesheet -->
@@ -37,65 +39,21 @@ include "koneksi.php";
 
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
         <!-- Spinner End -->
+
         <?php include "menu.php"; ?>
-
-        <!-- Carousel Start -->
-        <div class="carousel-header">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="tema/img/carousel-1.jpg" class="img-fluid" alt="Image">
-                        <div class="carousel-caption">
-                            <div class="text-center p-4" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Selamat datang di Pesisir Barat Lampung</h4>
-                                <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s"> Rasakan Petualangan yang Memukau</h1>
-                                <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Surga Tersembunyi di Pantai Barat Sumatera. Temukan Keindahan yang Menakjubkan
-                                </p>
-                                <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="tema/img/carousel-2.jpg" class="img-fluid" alt="Image">
-                        <div class="carousel-caption">
-                            <div class="text-center p-4" style="max-width: 900px;">
-                                <h5 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Selamat datang di Pesisir Barat Lampung</h5>
-                                <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Jelajahi Pesona Alam yang Tiada Tandingannya</h1>
-                                <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Temukan Keindahan yang Memikat dan Buat Kenangan Tak Terlupakan!
-                                </p>
-                                <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-secondary wow fadeInLeft" data-wow-delay="0.2s" aria-hidden="false"></span>
-                    <span class="visually-hidden-focusable">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-secondary wow fadeInRight" data-wow-delay="0.2s" aria-hidden="false"></span>
-                    <span class="visually-hidden-focusable">Next</span>
-                </button>
-            </div>
-        </div>
-        <!-- Carousel End -->
-
+       
 
         <!-- Modal Search Start -->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content rounded-0">
                     <div class="modal-header">
-                        <h4 class="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
+                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex align-items-center">
@@ -109,290 +67,354 @@ include "koneksi.php";
         </div>
         <!-- Modal Search End -->
 
+        <!-- Carousel Start -->
+        <div class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <div class="header-carousel-item-img-1">
+                    <img src="tema/img/carousel-1.jpg" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="carousel-caption">
+                    <div class="carousel-caption-inner text-start p-3">
+                        <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Website Resmi <?php echo"$k_k[nama]";?></h1>
+                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Kami siap Melayani Anda, Prioritas utama kami adalah Masyarakat</p></p>
+                           <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#informasi">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item mx-auto">
+                <div class="header-carousel-item-img-2">
+                    <img src="tema/img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="carousel-caption">
+                    <div class="carousel-caption-inner text-center p-3">
+                        <h1 class="display-1 text-capitalize text-white mb-4">Website Resmi <?php echo"$k_k[nama]";?></h1>
+                        <p class="mb-5 fs-5">Kami di sini siap membantu Anda dengan segala keperluan administrasi dan layanan Pekon</p>
+                     
+                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#layanan">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item">
+                <div class="header-carousel-item-img-3">
+                    <img src="tema/img/carousel-3.jpg" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="carousel-caption">
+                    <div class="carousel-caption-inner text-end p-3">
+                        <h1 class="display-1 text-capitalize text-white mb-4">Website Resmi <?php echo"$k_k[nama]";?></h1>
+                        <p class="mb-5 fs-5">Keluhan Masyarakat kami adalah masalah bagi kami, kami siap melayani bukan di layani
+                        </p>
+                    
+                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#team">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
 
 
         <!-- About Start -->
-        <div class="container-fluid py-5">
+        <div id="tentang" class="container-fluid about bg-light py-5">
             <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="bg-light rounded">
-                            <img src="foto/<?php echo"$k_k[logo]";?>" class="img-fluid w-100 border-bottom border-5 border-primary" style="border-top-right-radius: 300px; border-top-left-radius: 300px;" alt="Image">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="about-img">
+                            <img src="foto/<?php echo"$k_k[logo]";?>" class="img-fluid w-100 rounded-top bg-white" alt="Image">
                         </div>
                     </div>
-                    <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                        <h5 class="sub-title pe-3">Tentang </h5>
+                    <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                        <h4 class="text-primary">About Kami</h4>
                         <h1 class="display-5 mb-4"><?php echo"$k_k[nama]";?></h1>
-                        <p class="mb-4"><?php echo"$k_k[isi]";?></p>
-                        <div class="row gy-4 align-items-center">
-                            <div class="col-12 col-sm-6 d-flex align-items-center">
-                                <i class="fas fa-map-marked-alt fa-3x text-secondary"></i>
-                                <h5 class="ms-4">Tempat wisata terbaik</h5>
-                            </div>
-                            <div class="col-12 col-sm-6 d-flex align-items-center">
-                                <i class="fas fa-passport fa-3x text-secondary"></i>
-                                <h5 class="ms-4">Keidahan alam Menawan </h5>
-                            </div>
-                            <div class="col-4 col-md-3">
-                                <div class="bg-light text-center rounded p-3">
-                                    <div class="mb-2">
-                                        <i class="fas fa-ticket-alt fa-4x text-primary"></i>
-                                    </div>
-                                    <h1 class="display-5 fw-bold mb-2">20000</h1>
-                                    <p class="text-muted mb-0">Pengujung Kami Setiap Tahunya</p>
-                                </div>
-                            </div>
-                            <div class="col-8 col-md-9">
-                                <div class="mb-5">
-                                    <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> 99 % Pengujung Merasa Puas</p>
-                                    <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Kami Siap Melayani anda</p>
-                                    <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Informasi Kami update</p>
-                                </div>
-                                <div class="d-flex flex-wrap">
-                                    <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
-                                        <a href="" class="position-relative wow tada" data-wow-delay=".9s">
-                                            <i class="fa fa-phone-alt text-primary fa-3x"></i>
-                                            <div class="position-absolute" style="top: 0; left: 25px;">
-                                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <span class="text-primary">Jika ada Pertanyaan?</span>
-                                        <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: <?php echo"$k_k[tahun]";?></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text ps-4 mb-4"><?php echo"$k_k[isi]";?>
+                        </p>
+                                          
                     </div>
                 </div>
             </div>
         </div>
         <!-- About End -->
 
+
         <!-- Services Start -->
-        <div class="container-fluid service overflow-hidden pt-5">
+        <div id="layanan" class="container-fluid service py-5">
             <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Tempat Wisata Kami</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Kami Menawarkan Wisata Terbaik</h1>
-                    <p class="mb-0">Temukan keindahan tak tergoyahkan di Pesisir Barat! Nikmati matahari terbenam yang memukau, jelajahi pantai yang kaya akan keidahan alamnya, dan rasakan petualangan yang tak terlupakan di tepi barat Sumatera."</p>
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-primary">Layanan Kami</h4>
+                    <h1 class="display-4"> Layanan Kami yang Tersedia</h1>
                 </div>
-                <div class="row g-4">
-                <?php $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='informasi' ORDER BY id_berita DESC  LIMIT 6");
+                <div class="row g-4 justify-content-center text-center">
+                <?php $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='layanan' ORDER BY id_berita DESC  LIMIT 8");
 while ($t=mysqli_fetch_array($tebaru)){ ?>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item">
-                            <div class="service-inner">
-                                <div class="service-img">
-                                    <img src="foto/data/<?php echo"$t[gambar]";?>" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0">Kujungi Kami</a>
-                                        </div>
-                                        <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="utama.php?aksi=detailberita&id_berita=<?php echo"$t[id_berita]";?>">Detail</a>
-                                    </div>
-                                    <div class="service-content pb-4">
-                                        <a href="#"><h4 class="text-white mb-4 py-3">Kujungi Kami</h4></a>
-                                        <div class="px-4">
-                                            <p class="mb-4"><?php echo"$t[judul]";?></p>
-                                            <a class="btn btn-primary border-secondary rounded-pill py-3 px-5" href="utama.php?aksi=detailberita&id_berita=<?php echo"$t[id_berita]";?>">Explore More</a>
-                                        </div>
-                                    </div>
+                  <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item bg-light rounded">
+                            <div class="service-img">
+                                <img src="foto/data/<?php echo"$t[gambar]";?>" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> <?php echo"$t[judul]";?></a>
+                                    <p class="mb-4"><?php echo substr("$t[isi]", 0, 200); ?>
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="utama.php?aksi=detailberita&id_berita=<?php echo"$t[id_berita]";?>">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <?php } ?>
+                    <!-- <div class="col-12">
+                        <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">Lihat Layanan Kami</a>
+                    </div> -->
                 </div>
             </div>
         </div>
         <!-- Services End -->
 
 
-
-        <!-- Features Start -->
-        <div class="container-fluid features overflow-hidden py-5">
+        <!-- Project Start -->
+        <div id="informasi" class="container-fluid project">
             <div class="container">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Kenapa Memilih Kami</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Keidahan yang Memukau di setiap sisi pesisir</h1>
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-primary">Blog Kami</h4>
+                    <h1 class="display-4">Berita Terbaru</h1>
                 </div>
-                <div class="row g-4 justify-content-center text-center">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fas fa-dollar-sign fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Biaya Terjangkau</h5>
-                                <p class="mb-3">Nikmati Biaya Terjangkau di setiap kunjungan anda</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
+                <div class="project-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <?php $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='informasi' ORDER BY id_berita DESC  LIMIT 6");
+while ($t=mysqli_fetch_array($tebaru)){ ?>
+                   <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="project-img">
+                            <img src="foto/data/<?php echo"$t[gambar]";?>" class="img-fluid w-100 rounded" alt="Image">
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fab fa-cc-visa fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Wisata Yang Menarik</h5>
-                                <p class="mb-3">Banyak Tempat Wisata Yang dapat di kunjungi</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fas fa-atlas fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Tempat Penginapan</h5>
-                                <p class="mb-3">Kami Menyediakan Tempat Penginapan yang memadai</p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="feature-item text-center p-4">
-                            <div class="feature-icon p-3 mb-4">
-                                <i class="fas fa-users fa-4x text-primary"></i>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3">Tersedia Tourget</h5>
-                                <p class="mb-3">Kami menawarkan tourget yang dapat memandu anda </p>
-                                <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Features</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features End -->
-
-
-
-        <!-- Countries We Offer Start -->
-        <div class="container-fluid country overflow-hidden py-5">
-            <div class="container">
-                <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Galari Kami</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Nikmati Setiap Keindahan alam Kami</h1>
-                    <p class="mb-0">Keindahan Alam yang sangat memukau di setiap sisi pesisir barat lampung</p>
-                </div>
-                <div class="row g-4 text-center">
-                <?php $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC  LIMIT 8");
-while ($t=mysqli_fetch_array($tebaru)){ ?>  
-                   <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="foto/galleri/<?php echo"$t[gambar]";?>" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="foto/galleri/<?php echo"$t[gambar]";?>" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4"><?php echo"$t[judul]";?></a>
+                        <div class="project-content bg-light rounded p-4">
+                            <div class="project-content-inner">
+                                <div class="project-icon mb-3"><i class="fas fa-chart-line fa-4x text-primary"></i></div>
+                                <p class="text-dark fs-5 mb-3">Informasi</p>
+                                <a href="#" class="h4"><?php echo"$t[judul]";?></a>
+                                <div class="pt-4">
+                                    <a class="btn btn-light rounded-pill py-3 px-5" href="utama.php?aksi=detailberita&id_berita=<?php echo"$t[id_berita]";?>">Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <?php } ?>
-              
-                    <div class="col-12">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="utama.php?aksi=galeri">Lebih Banyak</a>
+                   
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Project End -->
+        <div class='container-fluid blog pb-5'>
+            <div class='container pb-5'>
+            <div class="row g-4 justify-content-center text-center">
+                <div class='row g-4 justify-content-center'>
+             
+                <div class="col-12">
+                        <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="utama.php?aksi=informasi">Lihat Berita Terbaru</a>
+                    </div>
+ 
+                </div>
+</div>
+            </div>
+        </div>
+
+        <!-- Blog Start -->
+        <div id="galeri" class="container-fluid blog pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-primary">Galeri Kami</h4>
+                    <h1 class="display-4">Layanani Kami Terbaiki, Bukan Paling Baik</h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                <?php  $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC  LIMIT 3");
+                        while ($t=mysqli_fetch_array($tebaru)){ ?>  
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded p-4" style="background-image: url(tema/img/bg.png);">
+                            <div class="mb-4">
+                                <h4 class="text-primary mb-2">Galeri</h4>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-0"><span class="text-dark fw-bold">On</span> <?php echo"$t[tgl]";?></p>
+                                    <p class="mb-0"><span class="text-dark fw-bold">By</span> admin</p>
+                                </div>
+                            </div>
+                            <div class="project-img">
+                                <img src="foto/galleri/<?php echo"$t[gambar]";?>" class="img-fluid w-100 rounded" alt="Image">
+                                <div class="blog-plus-icon">
+                                    <a href="foto/galleri/<?php echo"$t[gambar]";?>" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <a href="utama.php?aksi=galeri" class="h4"><?php echo"$t[judul]";?></a>
+                            </div>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="utama.php?aksi=galeri">Lihat Lebih Banyak</a>
+                        </div>
+                    </div>
+                    <?php } ?>
+                  
+                    
+                </div>
+                
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+        <!-- Team Start -->
+        <div id="team" class="container-fluid team pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-primary">Apartur Pekon</h4>
+                    <h1 class="display-4">Apartur <?php echo"$k_k[nama]";?></h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded">
+                            <div class="team-img">
+                                <img src="tema/img/team-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <div class="team-icon">
+                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
+                                    <div class="team-icon-share">
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-content bg-dark text-center rounded-bottom p-4">
+                                <div class="team-content-inner rounded-bottom">
+                                    <h4 class="text-white">THOHIR SAMSUDIN</h4>
+                                    <p class="text-muted mb-0">Kepala Pekon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded">
+                            <div class="team-img">
+                                <img src="tema/img/team-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <div class="team-icon">
+                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
+                                    <div class="team-icon-share">
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-content bg-dark text-center rounded-bottom p-4">
+                                <div class="team-content-inner rounded-bottom">
+                                    <h4 class="text-white">AYU SANTI</h4>
+                                    <p class="text-muted mb-0">Sekertaris</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded">
+                            <div class="team-img">
+                                <img src="tema/img/team-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <div class="team-icon">
+                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
+                                    <div class="team-icon-share">
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-content bg-dark text-center rounded-bottom p-4">
+                                <div class="team-content-inner rounded-bottom">
+                                    <h4 class="text-white">HADI SUPRIYANTO</h4>
+                                    <p class="text-muted mb-0">Tata Usaha</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item rounded">
+                            <div class="team-img">
+                                <img src="tema/img/team-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <div class="team-icon">
+                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
+                                    <div class="team-icon-share">
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-content bg-dark text-center rounded-bottom p-4">
+                                <div class="team-content-inner rounded-bottom">
+                                    <h4 class="text-white">AHMAD GHOZALI</h4>
+                                    <p class="text-muted mb-0">Keuangan</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Countries We Offer End -->
+        <!-- Team End -->
 
 
         <!-- Testimonial Start -->
-        <div class="container-fluid testimonial overflow-hidden pb-5">
+        <div id="hubungi" class="container-fluid testimonial bg-light py-5">
             <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Kata Meraka</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Yang Mereka Katakan Tentang Kami</h1></h1>
-                    <p class="mb-0"></p>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
-                    <div class="testimonial-item">
-                        <div class="testimonial-content p-4 mb-5">
-                            <p class="fs-5 mb-0">"Kunjungan saya ke Pesisir Barat Lampung sungguh luar biasa! Pantainya yang bersih dan tenang membuat saya merasa seperti berada di surga. Saya sangat menikmati sunset yang spektakuler di Pantai Krui dan kegiatan snorkeling yang mempesona di Pulau Pisang. Pengalaman ini benar-benar membuat saya jatuh cinta pada keindahan alam Indonesia."
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                                <img class="img-fluid rounded-circle" src="tema/img/testimonial-1.jpg" alt="img">
-                            </div>
-                            <div class="my-auto">
-                                <h5>Maya</h5>
-                                <p class="mb-0">Bandar Lampung</p>
-                            </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="h-100 rounded">
+                            <h4 class="text-primary">Testimoni</h4>
+                            <h1 class="display-4 mb-4">Testimoni Kami</h1>
+                            <p class="mb-4">Kami di sini siap membantu Anda dengan segala keperluan administrasi dan layanan Pekon</p>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="utama.php?aksi=hubungi">HUBUNGI KAMI <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content p-4 mb-5">
-                            <p class="fs-5 mb-0">"Saya dan keluarga menghabiskan liburan yang tak terlupakan di Pesisir Barat Lampung. Kami sangat terkesan dengan keramahan penduduk setempat dan kelezatan masakan lautnya. Berkunjung ke Desa Wisata Way Kambas dan merasakan kehidupan nelayan tradisional sungguh mengesankan. Kami pasti akan kembali lagi!"
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
+                    <div class="col-xl-8">
+                        <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                    <p class="mt-4">Saya sangat terkesan dengan pelayanan yang diberikan oleh Pekon Malaya. Ketika saya membutuhkan surat keterangan untuk keperluan administrasi, prosesnya sangat cepat dan mudah. Petugas di kantor desa juga sangat ramah dan membantu. Terima kasih Pekon Malaya atas pelayanannya yang baik.
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="my-auto text-end">
+                                        <h5>Sugiarto </h5>
+                                        <p class="mb-0">Warga Desa</p>
+                                    </div>
+                                    <div class="bg-white rounded-circle ms-3">
+                                        <img src="tema/img/1.png" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                                <img class="img-fluid rounded-circle" src="tema/img/testimonial-2.jpg" alt="img">
+                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                    <p class="mt-4">Sebagai ibu rumah tangga, saya sering menghadapi berbagai kesulitan terkait administrasi dan kesehatan keluarga. Namun, Pekon Malaya selalu memberikan bantuan dan informasi yang dibutuhkan. Saya pernah mengikuti program posyandu dan mendapatkan banyak pengetahuan tentang kesehatan anak. Terima kasih Pekon Malaya atas perhatiannya terhadap warga.
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="my-auto text-end">
+                                        <h5>Ibu Ani </h5>
+                                        <p class="mb-0">Ibu Rumah Tangga</p>
+                                    </div>
+                                    <div class="bg-white rounded-circle ms-3">
+                                        <img src="tema/img/2.png" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="my-auto">
-                                <h5>diah</h5>
-                                <p class="mb-0">Jakarta</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content p-4 mb-5">
-                            <p class="fs-5 mb-0">"Pesisir Barat Lampung adalah tempat yang sempurna untuk melarikan diri dari hiruk pikuk kota besar. Saat saya berada di sana, saya merasakan kedamaian yang sulit didapatkan di tempat lain. Berkuda di tepi pantai, menikmati angin laut yang segar, dan menikmati sunset yang memesona adalah momen-momen yang akan saya kenang seumur hidup. Saya sangat merekomendasikan destinasi ini kepada semua orang yang mencari liburan yang santai dan berkesan."
-                            <div class="d-flex justify-content-end">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                                <img class="img-fluid rounded-circle" src="tema/img/testimonial-3.jpg" alt="img">
-                            </div>
-                            <div class="my-auto">
-                                <h5>Ahmad</h5>
-                                <p class="mb-0">Palembang</p>
+                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                    <p class="mt-4">Program bantuan pertanian dari Pekon Malaya telah sangat membantu saya dalam meningkatkan produktivitas pertanian. Saya mendapatkan bantuan benih dan pupuk yang berkualitas serta pelatihan teknik pertanian modern. Dengan adanya dukungan ini, hasil panen saya meningkat dan ekonomi keluarga juga semakin stabil. Saya berterima kasih kepada Pekon Malaya atas perhatiannya terhadap petani di desa ini.
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="my-auto text-end">
+                                        <h5>Bapak Joko </h5>
+                                        <p class="mb-0">Petani</p>
+                                    </div>
+                                    <div class="bg-white rounded-circle ms-3">
+                                        <img src="tema/img/3.png" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -402,9 +424,7 @@ while ($t=mysqli_fetch_array($tebaru)){ ?>
         <!-- Testimonial End -->
 
 
-
-
-        <?php include "bawah.php"; ?>
+      <?php include"bawah.php"; ?>
 
 
         <!-- Back to Top -->
@@ -419,6 +439,7 @@ while ($t=mysqli_fetch_array($tebaru)){ ?>
     <script src="tema/lib/waypoints/waypoints.min.js"></script>
     <script src="tema/lib/counterup/counterup.min.js"></script>
     <script src="tema/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="tema/lib/lightbox/js/lightbox.min.js"></script>
     
 
     <!-- Template Javascript -->
