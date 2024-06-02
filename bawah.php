@@ -47,7 +47,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item-post d-flex flex-column">
                             <h4 class="text-white mb-4">Berita Terbaru</h4>
-                            <?php  $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='informasi' ORDER BY id_berita DESC LIMIT 1");              
+                            <?php  $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='informasi' ORDER BY RAND() LIMIT 1");              
 while ($t=mysqli_fetch_array($tebaru)){ ?>
                             <div class="d-flex flex-column mb-3">
                                 <p class="text-uppercase text-primary mb-2">by admin</p>
@@ -56,7 +56,7 @@ while ($t=mysqli_fetch_array($tebaru)){ ?>
                             <?php } ?>
                            
                             <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">View All Post <i class="fa fa-arrow-right ms-1"></i></a>
+                                <a href="utama.php?aksi=informasi" class="btn btn-light rounded-pill px-4">View All Post <i class="fa fa-arrow-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -64,5 +64,22 @@ while ($t=mysqli_fetch_array($tebaru)){ ?>
             </div>
         </div>
         <!-- Footer End -->
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
 
         
